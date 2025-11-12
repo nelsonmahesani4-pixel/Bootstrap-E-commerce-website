@@ -7,6 +7,7 @@
 
   body {
     background: #f7f7f7;
+    width:100%;
   }
   /* header */
   header {
@@ -25,13 +26,12 @@
   }
 nav{
   float: left;
-  width:650px;
+  width:700px;
   margin-right:300px;
 }
   nav ul {
     list-style: none;
     gap: 50px;
-    flex-wrap: wrap;
   }
 
   nav a {
@@ -39,20 +39,11 @@ nav{
     text-decoration: none;
     font-weight: 500;
   }
-
-  .header-right {
-    align-items: center;
-    gap: 10px;
-    margin-right:50px;
-  }
-.search-input{
-  width:500px;
-}
   .search-box input {
     padding: 6px 10px;
     border-radius: 5px;
     border: none;
-     width:500px;
+     width:400px;
   }
 
   .cart {
@@ -61,8 +52,9 @@ nav{
     border-radius: 6px;
     cursor: pointer;
   }
-
-  /* ===== HERO ===== */
+  .hero-section{
+    width:100%;
+  }
   .hero {
     flex-wrap: wrap;
     justify-content: center;
@@ -71,10 +63,17 @@ nav{
     color: #fff;
     padding: 50px 20px;
     text-align: center;
+    width: 100%;
+  }
+  .hero-image{
+    width:50%;
+    float: right;
+    right: 0%;
   }
 
+
   .hero img {
-    width: 100%;
+    width: 50%;
     max-width: 400px;
     height: auto;
     border-radius: 10px;
@@ -82,8 +81,8 @@ nav{
   }
 
   .hero-text {
-    max-width: 500px;
-    margin: 10px;
+    width: 50%;
+    margin:auto  auto  auto 10px;
   }
 
   .hero-text h1 {
@@ -114,20 +113,22 @@ nav{
 
   .categories h2 {
     margin-bottom: 20px;
+    margin-right:1000px;
+    width:100%;
   }
 
   .cat-container {
-    display: flex;
-    justify-content: center;
+    width:100%;
     flex-wrap: wrap;
     gap: 20px;
+    margin-left: 80px;
   }
 
   .cat {
+    justify-content: space-between;
     background: white;
-    padding: 20px;
     border-radius: 10px;
-    width: 180px;
+    width: 200px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: 0.3s;
   }
@@ -139,11 +140,10 @@ nav{
   .cat img {
     width: 100%;
     border-radius: 8px;
-    margin-bottom: 10px;
   }
   /* product-section */
   .products {
-    padding: 40px 20px;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
@@ -151,6 +151,7 @@ nav{
 
   .card {
     background: white;
+    height:600px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     text-align: center;
@@ -166,46 +167,72 @@ nav{
     width: 100%;
     border-radius: 10px;
   }
-
-  .card h3 {
-    margin: 10px 0 5px;
-  }
-
-  .card p {
-    color: gray;
-    font-size: 0.9rem;
-  }
-
+.AddToCart{
+}
   .card button {
     background: brown;
     color: white;
     border: none;
+    width:30%;
     border-radius: 5px;
     padding: 8px 15px;
     margin-top: 10px;
     cursor: pointer;
   }
-@media (max-width:480px){
+  @media screen and(min-width:300px) {
+    header{
+      width:100%;
+    }
+    .hero{
+      display: flex;
+      width:100%;
+    }
+    .search-box input {
+    padding: 6px 10px;
+    border-radius: 5px;
+    width:100px;
+    
+  }
+  
+  }
+  @media screen and (max-width:1100px){
+    header{
+      width:100%;
+    }
+    .hero{
+      display: flex;
+      width:100%;
+    }
+  }
+@media screen and (max-width:480px){
   *{
     width:100%;
   }
+  header{
+      width:100%;
+    }
+    .hero{
+      display: flex;
+      width:100%;
+    }
 }
  @media (max-width: 768px) {
-  *{
-    width:100%;
-  }
+  header{
+      width:100%;
+    }
+    .hero{
+      display: flex;
+      width:100%;
+    }
+    .hero img{
+      margin-left:0px;
+    }
     nav ul {
       justify-content: center;
     }
 
     .hero-text h1 {
       font-size: 1.6rem;
-    }
-
-    .header-right {
-      flex-basis: 100%;
-      justify-content: center;
-      margin-top: 10px;
     }
   }
   button{
