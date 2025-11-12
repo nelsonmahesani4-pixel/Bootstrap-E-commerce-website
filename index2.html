@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ShopKart</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  body {
+    background: #f7f7f7;
+  }
+  header {
+    background: #111;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .search-box input {
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+  }
+
+  .cart {
+    font-size: 20px;
+    background: brown;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .hero {
+    float:right
+    width:100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    color: #fff;
+    text-align: center;
+  }
+
+  .hero img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px;
+  }
+
+  .hero-text {
+    max-width: 500px;
+    margin: 10px;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .hero-text button {
+    padding: 10px 20px;
+    border: none;
+    background: brown;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  /* ===== CATEGORIES ===== */
+  .categories {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .categories h2 {
+    margin-bottom: 20px;
+  }
+
+  .cat-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .cat {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 180px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: 0.3s;
+  }
+
+  .cat:hover {
+    transform: scale(1.05);
+  }
+
+  .cat img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+  /* ===== PRODUCTS ===== */
+  .products {
+    padding: 40px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 20px;
+    transition: 0.3s;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+  }
+
+  .card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .card h3 {
+    margin: 10px 0 5px;
+  }
+
+  .card p {
+    color: gray;
+    font-size: 0.9rem;
+  }
+
+  .card button {
+    background: brown;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    font-size: 0.9rem;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    nav ul {
+      justify-content: center;
+    }
+
+    .hero-text h1 {
+      font-size: 1.6rem;
+    }
+
+    .header-right {
+      flex-basis: 100%;
+      justify-content: center;
+      margin-top: 10px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero {
+      flex-direction: column;
+    }
+    .cat {
+      width: 150px;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">ShopKart</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Deals</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-right">
+      <div class="search-box">
+        <input type="text" placeholder="Search products..." />
+      </div>
+      <div class="cart">🛒</div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Upgrade Your Style</h1>
+      <p>Find the latest trends and exclusive deals on your favorite brands.</p>
+      <button>Shop Now</button>
+    </div>
+    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="Shoes">
+  </section>
+
+  <section class="categories">
+    <h2>Shop by Category</h2>
+    <div class="cat-container">
+      <div class="cat">
+        <img src="https://images.unsplash.com/photo-1593032465171-8b62e41eec78" alt="Men">
+        <h3>Men</h3>
+      </div>
+      <div class="cat">
+        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f" alt="Women">
+        <h3>Women</h3>
+      </div>
+      <div class="cat">
+        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba" alt="Kids">
+        <h3>Kids</h3>
+      </div>
+    </div>
+  </section>
+
+  <section class="products">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86" alt="Watch">
+      <h3>Men’s Watch</h3>
+      <p>$59.99</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e" alt="Headphones">
+      <h3>Headphones</h3>
+      <p>$99.99</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1585386959984-a41552231693" alt="Shoes">
+      <h3>Stylish Shoes</h3>
+      <p>$79.99</p>
+      <button>Add to Cart</button>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 ShopKart — All Rights Reserved
+  </footer>
+</body>
+</html>
