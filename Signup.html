@@ -1,11 +1,90 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>General Form - Image Structure</title>
+    <link rel="stylesheet" href="style-image-match.css"> 
 </head>
 <body>
-    
+
+    <div class="form-container">
+        <h1>GENERAL APPLICATION</h1>
+
+        <form action="#" method="POST">
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" name="full_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="mobile">Mobile No.</label>
+                    <input type="tel" id="mobile" name="mobile" placeholder="eg. 0300234568" required>
+                </div>
+                <div class="form-group">
+                    <label for="dob-date">Date Of Birth</label>
+                    <div class="dob-group">
+                        <input type="text" id="dob-date" name="dob_date" placeholder="Date">
+                        <input type="text" id="dob-month" name="dob_month" placeholder="Month">
+                        <input type="text" id="dob-year" name="dob_year" placeholder="Year">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm_password" required>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="category">Select Category</label>
+                    <select id="category" name="category" required>
+                        <option value="">-- Select --</option>
+                        <option value="A">Category A</option>
+                        <option value="B">Category B</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="department">Department</label>
+                    <input type="text" id="department" name="department">
+                </div>
+            </div>
+
+            <div class="form-row full-width">
+                 <div class="form-group full-width-group">
+                    <label for="comments">Comments / Instructions</label>
+                    <textarea id="comments" name="comments" rows="3"></textarea>
+                </div>
+            </div>
+
+            <div class="form-row full-width">
+                <div class="form-group full-width-group checkbox-group">
+                    <label>Terms Acceptance</label>
+                    <div class="checkbox-options">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms" class="option-label">I agree to the Terms and Conditions.</label>
+                    </div>
+                </div>
+            </div>
+            
+            <button type="submit" class="submit-btn">SUBMIT APPLICATION</button>
+        </form>
+    </div>
+
 </body>
 </html>
