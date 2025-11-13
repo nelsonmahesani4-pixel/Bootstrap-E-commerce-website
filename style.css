@@ -25,14 +25,16 @@
 
   }
 nav{
-  float: left;
-  width:700px;
+  width:100%;
+  display:flex;
   margin-right:300px;
+  justify-content:center;
+  align-items:center;
 }
-  nav ul {
-    list-style: none;
-    gap: 50px;
-  }
+.list-unstyled{
+  border-radius:4px;
+padding:6px 10px 3px 10px;
+}
 
   nav a {
     color: white;
@@ -179,7 +181,7 @@ nav{
     margin-top: 10px;
     cursor: pointer;
   }
-  @media screen and(min-width:300px) {
+  /* @media screen and(min-width:300px) {
     header{
       width:100%;
     }
@@ -208,6 +210,29 @@ nav{
   *{
     width:100%;
   }
+  body{
+    width:705px;
+  }
+   .search-box input {
+    padding: 6px 10px;
+    border-radius: 5px;
+    width:400px;
+    margin-left:100px;
+    position:absolute;
+    top: 20px;
+    left:50px;
+    right:50px;
+    
+  }
+  header{
+position:absolute;
+  }
+  .navbar-items{
+    display:none;
+  }
+  #hamburger{
+    display:block;
+  }
   header{
       width:100%;
     }
@@ -234,33 +259,10 @@ nav{
     .hero-text h1 {
       font-size: 1.6rem;
     }
-  }
+  } */
   button{
     background-color:#7c0f0f;
     color:white;
-  }
-  .section-custom-announcement-bar.custom-marquee {
-    align-items: center;
-    height: 36px;
-    width: 100vw;
-    max-width: 100%;
-    overflow-x: hidden;
-    background:#222222; 
-    color:#ffffff; 
-  }
-  .section-custom-announcement-bar.custom-marquee a {
-    color:#ffffff; 
-    text-decoration: none;
-  }
-  .section-custom-announcement-bar.custom-marquee .track {
-    display: flex;
-    align-items: center;
-    white-space: nowrap;
-    animation: marquee 22s linear infinite;
-  }
-  .section-custom-announcement-bar.custom-marquee .content {
-    margin-left: 40px;
-    font-size: 12px;
   }
   @keyframes marquee {
     from {
@@ -270,3 +272,182 @@ nav{
       transform: translateX(-20%);
     }
   }
+
+
+  /* Small Mobile Devices (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .logo {
+    width: 80px;
+    margin-bottom: 10px;
+  }
+
+  nav {
+    width: 100%;
+    margin: 0;
+    display:none;
+  }
+
+  .navbar-items {
+    display: none;
+  }
+
+  .hamburger {
+    display: block !important;
+    font-size: 22px;
+    color: white;
+    margin-left: auto;
+  }
+
+  .search-box input {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text,
+  .hero img {
+    width: 100%;
+  }
+
+  .categories h2 {
+    margin-right: 0;
+  }
+
+  .cat-container {
+    justify-content: center;
+    margin: 0;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+  }
+
+  .community {
+    flex-direction: column;
+    margin-left: 0 !important;
+  }
+
+  .watch-image img {
+    width: 100%;
+  }
+}
+
+/* Tablets (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  nav {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .search-box input {
+    width: 80%;
+  }
+
+  .navbar-items {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero-text,
+  .hero img {
+    width: 100%;
+  }
+
+  .cat-container {
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  .products {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .hero-section {
+    flex-direction: column;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .cards .d-flex {
+    justify-content: center;
+  }
+}
+
+/* Laptops (max-width: 992px) */
+@media screen and (max-width: 992px) {
+  nav {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .navbar-items {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 30px 10px;
+  }
+
+  .hero img {
+    max-width: 300px;
+  }
+
+  .cat-container {
+    justify-content: center;
+  }
+
+  .products {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+/* Large Screens (max-width: 1200px) */
+@media screen and (max-width: 1200px) {
+  nav {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .hero {
+    justify-content: center;
+  }
+
+  .hero-text {
+    width: 60%;
+  }
+
+  .hero img {
+    width: 40%;
+  }
+}
