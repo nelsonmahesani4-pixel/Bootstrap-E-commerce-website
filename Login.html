@@ -4,18 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOGIN </title>
+    <link rel="stylesheet" href="style.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"/>
+      <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 </head>
-<body>
-    <h1>   LOGIN PAGE</h1>
-    <form action="">    
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
-        <input type="submit" value="Login">
+<style>
+    .main-Login{
+        width:100%;
+  height: 100%;
+  justify-content: center;
+  margin:auto;
+  margin-top: 200px;
+}
+.login-card{
+  justify-content:center;
+  display: grid;
+  width:20%;
+height:auto;
+color:black;
+border-radius: 4px;;
 
-        
+
+}
+.table-form{
+  padding-top:1px;
+  margin:auto;
+
+}
+@media screen and (max-width:768px) {
+    .login-card{
+        width:40%;
+    }
+    
+}
+.Login-button{
+    margin-left:90px;
+    margin-right:90px;
+    background-color: rgb(73, 73, 88);
+   border-radius: 4px;
+    
+}
+.login-btn{
+    background-color: rgb(73, 73, 88);
+   border-radius: 4px;
+   color:white;
+}
+
+
+</style>
+<body>
+    <div class="main-Login  ">
+    <div class="login-card shadow-lg p-3 mb-5 bg-body-tertiary rounded mt-5 m-auto">
+    <form action="">    
+      <div class="logo d-flex ">
+    <img src="https://cdn.shopify.com/b/shopify-brochure2-assets/d9340911ca8c679b148dd4a205ad2ffa.svg" alt="lama" class="image-logo">
+  </div> 
+        <p class="fs-0"> Enter Your valid Email &Password we'll send you a verification Code</p>
+        <table class="table-form ">
+            <tr><td><label for="username">Username:</label></td></tr>
+            <tr><td><input type="text" id="username" name="username" required><br><br></td></tr>
+            <tr><td><label for="password">Password:</label></td></tr>
+            <tr><td><input type="password" id="password" name="password" required><br><br></td></tr>
+        </table>
+        <div >
+            <ul class="Login-button list-unstyled ps-3 pe-3"><li><a href="" class="btn">Login</a></li></ul>
+        </div>
+        <h4 class="ms-5 ps-5">OR</h4>
+        <ul class="list-unstyled ps-5">
+            <li class="login-btn ps-5" > <a href="" class="login-btn text-decoration-none"> Login With E-mail</a>
+            </li>
+        </ul>
     </form>
+    
+</div>
+    </div>
     
 </body>
 </html>
