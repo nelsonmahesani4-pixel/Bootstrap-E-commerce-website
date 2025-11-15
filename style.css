@@ -228,6 +228,14 @@ padding: 8px;
 left:300px;
   margin: auto;
 }
+.badge1,.badge2{
+  border-radius:4px;
+  font-size: small;
+}
+.badge,.badge1,.badge2{
+  top:-30px;
+  left:-30px;
+}
 @media screen and (max-width: 300px) and (min-width:200){
   body{
     width:500px;
@@ -327,6 +335,7 @@ border-radius:4px;
   .community {
     margin-left: 0 !important;
   }
+  
 
 }
   /* Small Mobile Devices (max-width: 480px) */
@@ -365,7 +374,7 @@ border-radius:4px;
     display:block;
     position:absolute;
     top:30px;
-    left:400px;
+    left:550px;
   }
   .Account{
     margin-left:100px;
